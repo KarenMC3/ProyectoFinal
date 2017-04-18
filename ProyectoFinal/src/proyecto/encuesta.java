@@ -1,5 +1,6 @@
 package proyecto;
 
+import java.awt.Color;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.swing.JOptionPane;
 
@@ -20,6 +21,9 @@ public class encuesta extends javax.swing.JFrame {
         
         initComponents();  
         generar();
+        
+                this.getContentPane().setBackground(Color.gray);
+
         
     }
     
@@ -86,8 +90,14 @@ public class encuesta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(0, 51, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("jLabel1");
 
+        opc1.setBackground(new java.awt.Color(0, 51, 255));
+        opc1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        opc1.setForeground(new java.awt.Color(255, 255, 255));
         opc1.setText("jRadioButton1");
         opc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +105,9 @@ public class encuesta extends javax.swing.JFrame {
             }
         });
 
+        opc2.setBackground(new java.awt.Color(0, 51, 255));
+        opc2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        opc2.setForeground(new java.awt.Color(255, 255, 255));
         opc2.setText("jRadioButton2");
         opc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +115,9 @@ public class encuesta extends javax.swing.JFrame {
             }
         });
 
+        opc3.setBackground(new java.awt.Color(0, 51, 255));
+        opc3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        opc3.setForeground(new java.awt.Color(255, 255, 255));
         opc3.setText("jRadioButton3");
         opc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +125,9 @@ public class encuesta extends javax.swing.JFrame {
             }
         });
 
+        opc4.setBackground(new java.awt.Color(0, 51, 255));
+        opc4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        opc4.setForeground(new java.awt.Color(255, 255, 255));
         opc4.setText("jRadioButton4");
         opc4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,19 +142,22 @@ public class encuesta extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(opc4)
-                    .addComponent(opc3)
-                    .addComponent(opc2)
-                    .addComponent(opc1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(opc4)
+                            .addComponent(opc3)
+                            .addComponent(opc2)
+                            .addComponent(opc1))
+                        .addGap(0, 208, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(opc1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(opc2)
@@ -143,7 +165,7 @@ public class encuesta extends javax.swing.JFrame {
                 .addComponent(opc3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(opc4)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();

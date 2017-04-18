@@ -6,6 +6,7 @@
 package proyecto;
 
 import com.sun.org.apache.xerces.internal.parsers.IntegratedParserConfiguration;
+import java.awt.Color;
 import javax.swing.DefaultListModel;
 import sun.awt.DefaultMouseInfoPeer;
 
@@ -37,6 +38,8 @@ public class editar extends javax.swing.JFrame {
 
     public editar() {
         initComponents();
+                this.getContentPane().setBackground(Color.gray);
+
     }
 
     @SuppressWarnings("unchecked")
@@ -58,10 +61,13 @@ public class editar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jlPreguntas.setBackground(new java.awt.Color(102, 102, 102));
         jScrollPane1.setViewportView(jlPreguntas);
 
+        jlRespuestas.setBackground(new java.awt.Color(102, 102, 102));
         jScrollPane2.setViewportView(jlRespuestas);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1.setText("Cargar preguntas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,18 +75,27 @@ public class editar extends javax.swing.JFrame {
             }
         });
 
+        txtnumeroPregunta.setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel1.setText("Seleccione numero de pregunta:");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setText("Escriba nueva pregunta sin numero:");
 
+        txtnuevaPregunta.setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel3.setText("Escriba nueva respuesta sin numero:");
 
+        txtNuevaRespuesta.setBackground(new java.awt.Color(102, 102, 102));
         txtNuevaRespuesta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNuevaRespuestaActionPerformed(evt);
             }
         });
 
+        btnAgregar.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
